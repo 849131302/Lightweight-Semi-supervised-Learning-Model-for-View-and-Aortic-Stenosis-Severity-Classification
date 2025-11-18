@@ -19,26 +19,37 @@ This project implements semi-supervised learning models that can effectively uti
 - **Reproducible Results**: Complete experimental setup for reproducible research
 
 ## 📁 Project Structure
-├── models/ # Model architectures
-│ ├── base_model.py # Base model class
-│ ├── resnet.py # ResNet implementations
-│ └── ssl_models.py # Semi-supervised models
-├── Tools/ # Utility functions and tools
-│ ├── metrics.py # Evaluation metrics
-│ └── visualization.py # Visualization utilities
-├── SSLTRAIN-AS.py # Semi-supervised training for Aortic Stenosis
-├── SSLTRAIN-VIEW.py # Semi-supervised training for View classification
-├── TRAIN-AS.py # Supervised training for Aortic Stenosis
-├── TRAIN-VIEW.py # Supervised training for View classification
-├── augment.py # Data augmentation utilities
-├── split.py # Data splitting utilities
-└── requirements.txt # Python dependencies
-
+<pre>
+├── models/                   # Model architectures
+│   ├── lwn.py                # Base lightweight network
+├── Tools/                    # Utility functions and tools
+│   ├── Grad-CAM.py           # Comparison of heatmaps across multiple networks
+│   ├── Robustness.py         # Robustness testing in the paper
+│   └── confusion_matrix.py   # Confusion matrix of three view and four view
+├── SSLTRAIN-AS.py            # Semi-supervised training for Aortic Stenosis
+├── SSLTRAIN-VIEW.py          # Semi-supervised training for View classification
+├── TRAIN-AS.py               # Supervised training for Aortic Stenosis
+├── TRAIN-VIEW.py             # Supervised training for View classification
+├── augment.py                # Data augmentation utilities
+├── split.py                  # Data splitting utilities
+└── requirements.txt          # Python dependencies
+</pre>
 ### Process the dataset
 
-https://tmed.cs.tufts.edu/tmed_v2.html
+The dataset required your application to be used (https://tmed.cs.tufts.edu/tmed_v2.html)
 # Running experiments
-python TRAIN-VIEW.py
+Split dataset:
+You can divide the dataset according to the TMED official classification in this way:
+```bash
+python split.py --data_dir /path/to/data --output_dir ./splits 
+```
+Training:
+You can train the model in fully supervised and semi supervised ways through TRAIN-VIEW.py 
+SSLTRAIN-AS.py 
+SSLTRAIN-VIEW.py
+TRAIN-AS.py
+TRAIN-VIEW.py  
+
 
 
 
