@@ -11,12 +11,10 @@ This project implements semi-supervised learning models that can effectively uti
 
 ## 🚀 Features
 
-- **Lightweight Models**: Efficient architectures suitable for medical imaging applications
-- **Semi-supervised Learning**: Leverages both labeled and unlabeled data using MixMatch and other SSL techniques
+- **Lightweight Models**: Efficient network architectures suitable for medical imaging applications
+- **Semi-supervised Learning**: Leverages both labeled and unlabeled data using our SSL techniques
 - **Dual Task Support**: Handles both view classification and aortic stenosis assessment
 - **Data Augmentation**: Comprehensive augmentation pipeline for medical images
-- **Flexible Training**: Both supervised and semi-supervised training options
-- **Reproducible Results**: Complete experimental setup for reproducible research
 
 ## 📁 Project Structure
 <pre>
